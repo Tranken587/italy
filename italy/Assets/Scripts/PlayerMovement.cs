@@ -11,11 +11,11 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isJumping;
 
-    private Rigidbody2D rb;
+    private Rigidbody2D body;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        body = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -23,11 +23,11 @@ public class PlayerMovement : MonoBehaviour
     {
         Move = Input.GetAxis("Horizontal");
 
-        rb.velocity = new Vector2(speed * Move, rb.velocity.y);
+        body.velocity = new Vector2(speed * Move, body.velocity.y);
 
         if (Input.GetButtonDown("Jump") && isJumping == false)
         {
-            rb.AddForce(new Vector2(rb.velocity.x, jump));
+            body.AddForce(new Vector2(body.velocity.x, jump));
         }
     }
     private void OnCollisionEnter2D(Collision2D other)
