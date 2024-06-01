@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        body.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
     // Update is called once per frame
