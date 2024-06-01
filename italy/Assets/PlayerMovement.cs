@@ -25,9 +25,24 @@ public class PlayerMovement : MonoBehaviour
 
         rb.velocity = new Vector2(speed * Move, rb.velocity.y);
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && isJumping == false)
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump));
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("Ground"))
+        {
+            isJumping = false;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("Ground"))
+        {
+            isJumping = true;
         }
     }
 }
