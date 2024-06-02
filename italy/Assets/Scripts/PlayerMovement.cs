@@ -53,6 +53,7 @@ public class PlayerhorizontalInputment : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             isJumping = false;
+            anim.SetBool("jump", false);
         }
     }
 
@@ -61,6 +62,7 @@ public class PlayerhorizontalInputment : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             isJumping = true;
+            anim.SetBool("jump", true);
         }
     }
 }
