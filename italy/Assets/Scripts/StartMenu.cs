@@ -7,7 +7,7 @@ public class StartMenu : MonoBehaviour
 {
     public GameObject startMenu;
     public GameObject levelMenu;
-    public GameObject volumeMenu;
+    public GameObject settingMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,8 +30,30 @@ public class StartMenu : MonoBehaviour
         SceneManager.LoadScene("level1");
     }
 
-    public void changeVolume()
+    public void closeLevelMenu()
     {
-        volumeMenu.SetActive(true);
+        levelMenu.SetActive(false);
     }
+
+    public void setting()
+    {
+        settingMenu.SetActive(true);
+    }
+
+    public void closeSettingMenu()
+    {
+        settingMenu.SetActive(false);
+    }
+
+    public void mute()
+    {
+
+    }
+
+    public void unmute()
+    {
+
+    }
+
+    // public void 
 }
