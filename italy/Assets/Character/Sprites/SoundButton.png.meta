@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fd591729a789b86498d0d44bb9a6e58a
+guid: 9b7613916f3a92f43bb176be1e3c914c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SoundButtonSpriteSheet_0
+      name: SoundButton_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2150bcdf13ef6b4c883ad4ef5ae34e8
-      internalID: 594274490
+      spriteID: 2f63abcaeab16b14f96c9496c1982a8d
+      internalID: -760625389
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SoundButtonSpriteSheet_1
+      name: SoundButton_1
       rect:
         serializedVersion: 2
         x: 640
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8684f82ac7284949b96c564ff81695f
-      internalID: -2114158169
+      spriteID: 4a412374bd7c4b148b55f4d338692a4e
+      internalID: 1086217020
       vertices: []
       indices: 
       edges: []
@@ -162,8 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SoundButtonSpriteSheet_0: 594274490
-      SoundButtonSpriteSheet_1: -2114158169
+      SoundButton_0: -760625389
+      SoundButton_1: 1086217020
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
