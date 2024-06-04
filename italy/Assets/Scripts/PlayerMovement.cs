@@ -13,6 +13,8 @@ public class PlayerhorizontalInputment : MonoBehaviour
     private Rigidbody2D body;
     private Animator anim;
 
+    AudioSource shoppingCartMoving;
+
     // public sealed float scaleX = transform.localScale.x;
 
     // Start is called before the first frame update
@@ -22,6 +24,8 @@ public class PlayerhorizontalInputment : MonoBehaviour
         body.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         anim = GetComponent<Animator>();
+
+        shoppingCartMoving = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -39,6 +43,21 @@ public class PlayerhorizontalInputment : MonoBehaviour
         else if (horizontalInput < -0.1f)
         {
             transform.localScale = new Vector3(-1 * Math.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+
+        if(shoppingCartMoving.isPlaying)
+        {
+            if(horizontalInput == 0f || isJumping)
+            {
+                shoppingCartMoving.Stop();
+            }
+        }
+        else
+        {
+            if((horizontalInput > 0.1f || horizontalInput < -0.1f) && !isJumping)
+            {
+                shoppingCartMoving.Play();
+            }
         }
 
         if (Input.GetButtonDown("Jump") && isJumping == false)
