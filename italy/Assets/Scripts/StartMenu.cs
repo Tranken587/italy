@@ -7,7 +7,7 @@ public class StartMenu : MonoBehaviour
 {
     public GameObject startMenu;
     public GameObject levelMenu;
-    public GameObject settingMenu;
+    public GameObject optionsMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +17,20 @@ public class StartMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(levelMenu.activeSelf)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                closeLevelMenu();
+            }
+        }
+        else if(optionsMenu.activeSelf)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                closeOptionsMenu();
+            }
+        }
     }
 
     public void selectLevel()
@@ -35,22 +48,17 @@ public class StartMenu : MonoBehaviour
         levelMenu.SetActive(false);
     }
 
-    public void setting()
+    public void options()
     {
-        settingMenu.SetActive(true);
+        optionsMenu.SetActive(true);
     }
 
-    public void closeSettingMenu()
+    public void closeOptionsMenu()
     {
-        settingMenu.SetActive(false);
+        optionsMenu.SetActive(false);
     }
 
     public void mute()
-    {
-
-    }
-
-    public void unmute()
     {
 
     }
