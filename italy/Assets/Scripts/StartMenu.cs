@@ -40,7 +40,23 @@ public class StartMenu : MonoBehaviour
 
     public void select1()
     {
-        SceneManager.LoadScene("level1");
+        SceneManager.LoadSceneAsync(1);
+    }
+    public void select2()
+    {
+        SceneManager.LoadSceneAsync(2);
+    }
+    public void select3()
+    {
+        SceneManager.LoadSceneAsync(3);
+    }
+    public void select4()
+    {
+        SceneManager.LoadSceneAsync(4);
+    }
+    public void select5()
+    {
+        SceneManager.LoadSceneAsync(5);
     }
 
     public void closeLevelMenu()
